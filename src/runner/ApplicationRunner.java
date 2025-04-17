@@ -15,7 +15,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import static src.CommandType.*;
-import static src.Costants.*;
+import static src.Constants.*;
 import static src.util.CipherKeyValidatorUtil.isArgumentsValid;
 
 public class ApplicationRunner {

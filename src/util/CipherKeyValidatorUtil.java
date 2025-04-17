@@ -3,7 +3,7 @@ package src.util;
 import src.CommandType;
 import src.exceptions.InvalidKeyException;
 
-import static src.Costants.ALLOWED_KEY;
+import static src.Constants.ALLOWED_KEY;
 
 public class CipherKeyValidatorUtil {
 
