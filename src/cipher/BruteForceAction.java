@@ -44,14 +44,11 @@ public class BruteForceAction extends CaesarCipherAction {
         int key = result.key();
         int score = 0;
 
-        // 1. Пробіли
         score += (int) text.chars().filter(ch -> ch == ' ').count();
 
-        // 2. Слова з COMMON_WORDS
         List<String> words = List.of(text.split("[\\s\\p{Punct}]+"));
         score += (int) words.stream().map(String::toLowerCase).filter(Constants.COMMON_WORDS::contains).count();
 
-        // 3. Регістр (парність ключа)
         long upper = text.chars().filter(Character::isUpperCase).count();
         long lower = text.chars().filter(Character::isLowerCase).count();
         if (key % 2 == 0 && upper > lower) {
